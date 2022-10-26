@@ -5,6 +5,7 @@ import GameBanner from './components/GameBanner'
 import './styles/main.css'
 import logo from './assets/logo-nlw-esports.svg'
 interface Game {
+  key: string;
   id: string;
   title: string;
   bannerUrl: string;
@@ -45,18 +46,14 @@ function App() {
          *        - title: contem a string do titulo do jogo
          *        - adsCount: contém o número de ads de dentro de _count
          */
+      games.map((DuoGame:Game) => 
+      <GameBanner 
+      key={DuoGame.key}
+      image={DuoGame.bannerUrl} 
+      title={DuoGame.title} 
+      contador={DuoGame._count.ads}
+      />)
       }
-
-      {
-        /**
-         * Remova o trecho abaixo quando inserir o conteúdo da resposta acima
-         */
-      }
-      <GameBanner />
-      <GameBanner />
-      <GameBanner />
-      <GameBanner />
-      <GameBanner />
 
     </div>
 
