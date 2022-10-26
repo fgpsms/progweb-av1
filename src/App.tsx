@@ -23,7 +23,7 @@ function App() {
       /**
        * (1pt) atribua o conteúdo 'data' para a variável games
        */
-      
+      setGames(data);
     }
     )
   }, [])
